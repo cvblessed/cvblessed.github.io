@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magazin Apicol - Stupina Online</title>
+
+  <!-- Font Google simplu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Magazin apicol Stupina Online">
+        <div class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7.5 4.5 12 2l4.5 2.5M5 8.5v7l7 4 7-4v-7L12 4.5 5 8.5z" />
+            <path d="M9 9.5v5l3 1.7 3-1.7v-5L12 7.8 9 9.5z" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span>Stupina Online</span>
+          <span>Magazin apicol artizanal</span>
+        </div>
+      </a>
+
+      <nav aria-label="Navigare principală">
+        <a href="#produse">Produse</a>
+        <a href="#despre">Despre stupină</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="cart-button" id="cartToggle" type="button">
+        <span>Coș</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="container hero" aria-labelledby="hero-title">
+      <div>
+        <div class="hero-badge">
+          Miere crudă direct din stupină
+          <span>Chișinău • Sîngera</span>
+        </div>
+        <h1 id="hero-title">
+          Miere 100 naturală și produse apicole <span>direct de la apicultor</span>
+        </h1>
+        <p>
+          Alege miere crudă, propolis, polen și alte delicii din stupină, produse în loturi mici,
+          extrase la rece și împachetate cu grijă.
+        </p>
+        <div class="hero-actions">
+          <button type="button" class="btn-primary" data-scroll-to="produse">
+            Vezi produsele
+            <span aria-hidden="true">→</span>
+          </button>
+          <button type="button" class="btn-secondary" data-scroll-to="despre">
+            Despre stupina noastră
+          </button>
+        </div>
+        <div class="hero-meta">
+          <span><strong>Livrare locală</strong> în 24-48h în Chișinău și împrejurimi</span>
+          <span><strong>Reducere 10</strong> la pachete cadou</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card">
+          <h2>Colecția de primăvară</h2>
+          <p>Miere florală, ceară pură și tincturi de propolis pentru imunitate.</p>
+          <div class="hero-grid">
+            <div class="mini-card">
+              <span>NOU</span>
+              <strong>Miere polifloră</strong>
+              <span>Recoltată în aprilie - mai, gust floral echilibrat.</span>
+            </div>
+            <div class="mini-card">
+              <span>PACHETE</span>
+              <strong>Cadouri apicole</strong>
+              <span>Cutii elegante cu miere, ceară și lumânări.</span>
+            </div>
+          </div>
+          <div class="info-strip">
+            <div class="info-pill">
+              <div class="info-icon">🐝</div>
+              <div>
+                <strong>Stupină de familie</strong>
+                <span>Loturi mici, controlate de la floare până la borcan.</span>
+              </div>
+            </div>
+            <div class="info-pill">
+              <div class="info-icon">🌿</div>
+              <div>
+                <strong>Fără adaosuri</strong>
+                <span>Doar miere crudă, neîncălzită, nefiltrată agresiv.</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-sticker">
+            Miere crudă
+            <strong>100 natural</strong>
+            direct din stup
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="produse" class="section container" aria-labelledby="produse-title">
+      <div class="section-header">
+        <div class="section-title">
+          <h2 id="produse-title">Produse apicole</h2>
+          <p>Alege sortimentele preferate sau creează-ți propriul pachet cadou cu miere și produse din stup.</p>
+        </div>
+        <div class="filter-chips" aria-hidden="true">
+          <span class="chip is-active">Toate</span>
+          <span class="chip">Miere crudă</span>
+          <span class="chip">Propolis și polen</span>
+          <span class="chip">Cosmetică și ceară</span>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid" aria-live="polite">
+        <!-- Produsele vor fi randate din JavaScript -->
+      </div>
+    </section>
+
+    <section id="despre" class="section container" aria-labelledby="despre-title">
+      <div class="section-header">
+        <div class="section-title">
+          <h2 id="despre-title">Despre stupina noastră</h2>
+          <p>
+            Suntem o mică stupină de familie din Sîngera, pasionată de albine, natură și produse curate.
+          </p>
+        </div>
+      </div>
+      <p class="text-body">
+        Lucrăm cu un număr limitat de stupi, pentru a putea urmări atent starea familiilor de albine și
+        calitatea fiecărui kilogram de miere. Recoltăm manual, la momentul potrivit, și păstrăm mierea
+        la temperaturi controlate, fără a o pasteuriza sau supraîncălzi.
+      </p>
+      <p class="text-body mt-small">
+        Dacă vrei să ne vizitezi stupina sau să comanzi cantități mai mari pentru evenimente, scrie-ne
+        un mesaj și stabilim împreună detaliile.
+      </p>
+    </section>
+
+    <section id="contact" class="section container" aria-labelledby="contact-title">
+      <div class="section-header">
+        <div class="section-title">
+          <h2 id="contact-title">Contact și comenzi</h2>
+          <p>Pentru comenzi speciale sau întrebări, trimite-ne un mesaj. Îți răspundem în cel mult o zi lucrătoare.</p>
+        </div>
+      </div>
+      <form class="contact-form">
+        <label>
+          Nume și prenume
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Telefon / Email
+          <input type="text" name="contact" required />
+        </label>
+        <label>
+          Mesaj (ex: ce produse te interesează)
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button type="submit" class="btn-primary btn-contact">
+          Trimite mesajul
+        </button>
+        <p class="contact-note">
+          Formularul este doar de prezentare. Poți adapta ușor această secțiune pentru a trimite datele spre un backend real.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <aside class="cart-panel" aria-label="Coș de cumpărături" aria-hidden="true" id="cartPanel">
+    <div class="cart-header">
+      <div>
+        <h2>Coșul tău</h2>
+        <small>Produsele sunt simulate pentru exemplu front-end.</small>
+      </div>
+      <button type="button" class="cart-close" id="cartClose" aria-label="Închide coșul">
+        ✕
+      </button>
+    </div>
+    <div class="cart-body" id="cartItems">
+      <p class="cart-empty">Coșul este gol. Adaugă câteva borcane de miere pentru a începe.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <span>Total</span>
+        <div>
+          <strong id="cartTotal">0 MDL</strong>
+          <div class="cart-shipping-note">Livrarea se calculează ulterior</div>
+        </div>
+      </div>
+      <button type="button" class="btn-checkout">
+        Finalizează comanda (mock)
+      </button>
+    </div>
+  </aside>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© Stupina Online, ${new Date().getFullYear()} • Produse apicole artizanale din Sîngera, Chișinău</span>
+      <span>Acesta este un prototip front-end. Adaptează-l liber pentru proiectul tău.</span>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
